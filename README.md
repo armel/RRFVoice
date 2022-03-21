@@ -10,6 +10,7 @@ Sur votre Spotnik, placez vous dans le répertoire `root` et cloner le projet RR
 
 ``
 cd root
+
 git clone https://github.com/armel/RRFVoice.git
 ``
 
