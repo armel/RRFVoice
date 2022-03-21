@@ -15,8 +15,19 @@ git clone https://github.com/armel/RRFVoice.git
 
 Vous pouvez aussi récuppérer une archive zip, avec l'ensemble du projet, si vous n'avez pas git.
 
+### Génération du certificat auto signé
 
+Placez vous dans le répertoire `RRFVoice` :
+
+```
+cd /root/RRFVoice
+```
+
+Exécutez la commande : 
+
+```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem -config ssl.cnf -sha256
+```
 
 ### Lancement
 
@@ -26,21 +37,26 @@ Placez vous dans le répertoire `RRFVoice` :
 cd /root/RRFVoice
 ```
 
-Lancer le script `RRFRemote.js`  via la commande : 
+Exécutez la commande : 
 
 ```
-nohup node RRFRemote.js &
+./RRFVoice.sh start
 ```
 
-Lancer le script `RRFVoice.js`  via la commande : 
+Vous pourrez arréter RRFVoice avec la commande
+
 
 ```
-nohup node RRFVoice.js &
+./RRFVoice.sh stop
 ```
 
 ## Utilisation
 
-Depuis un navigateur Chrome (ou Chromium), allez sur `http://adresse_ip_de_votre_spotnik:4443/`. Pour lancer une commande, cliquez sur le microphone. 
+Depuis un navigateur Chrome (ou Chromium), allez sur `http://adresse_ip_de_votre_spotnik:4443/`. 
+Pensez au _thisisunsafe_ (https://cybercafe.dev/thisisunsafe-bypassing-chrome-security-warnings/)
+
+
+Pour lancer une commande, cliquez sur le microphone. 
 
 > Attention, votre navigateur va vous demander l'authorization d'utiliser le microphone de votre PC. Vous devez accepter !!!
 
