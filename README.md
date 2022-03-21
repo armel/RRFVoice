@@ -53,8 +53,7 @@ Vous pourrez arréter RRFVoice avec la commande
 ## Utilisation
 
 Depuis un navigateur Chrome (ou Chromium), allez sur `http://adresse_ip_de_votre_spotnik:4443/`. 
-Pensez au _thisisunsafe_ (https://cybercafe.dev/thisisunsafe-bypassing-chrome-security-warnings/)
-
+Pensez au [_thisisunsafe_](https://dblazeski.medium.com/chrome-bypass-net-err-cert-invalid-for-development-daefae43eb12) afin de contourner la limitation du certificat auto signé.
 
 Pour lancer une commande, cliquez sur le microphone. 
 
@@ -63,7 +62,3 @@ Pour lancer une commande, cliquez sur le microphone.
 Vous n'avez plus qu'à parler en disant à haute voix, par exemple, _salon local_. Et votre Spotnik fera QSY sur le salon local !
 
 > Vous devez cliquer sur le microphone à chaque nouvelle commande.
-
-## Note
-
-Note pour moi-même concernant les certificats : https://timonweb.com/django/https-django-development-server-ssl-certificate/
