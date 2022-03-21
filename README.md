@@ -8,12 +8,12 @@ Le projet RRFVoice permet de piloter son Spotnik par le biais de commandes vocal
 
 Sur votre Spotnik, placez vous dans le répertoire `root` et cloner le projet RRFVoice :
 
-``
+```
 
 cd root
 git clone https://github.com/armel/RRFVoice.git
 
-``
+```
 
 
 Vous pouvez aussi récuppérer une archive zip, avec l'ensemble du projet, si vous n'avez pas git.
