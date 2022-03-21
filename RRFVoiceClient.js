@@ -17,7 +17,6 @@ app.use('/', function(req,res){
 const options = {
   key: fs.readFileSync('key.pem'),
   cert: fs.readFileSync('cert.pem'),
-  passphrase: 'spotnik'
 };
 
 const server = https.createServer(options, app);

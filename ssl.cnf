@@ -3,16 +3,16 @@ distinguished_name = req_distinguished_name
 req_extensions = v3_req
 prompt = no
 [req_distinguished_name]
-C = US
-ST = VA
-L = SomeCity
-O = MyCompany
-OU = MyDivision
-CN = 192.168.1.250
+C = FR
+ST = FR
+L = Paris
+O = RRF
+OU = RRFDevLab
+CN = my.spotnik.com
 [v3_req]
 keyUsage = keyEncipherment, dataEncipherment
 extendedKeyUsage = serverAuth
 subjectAltName = @alt_names
 [alt_names]
-DNS.1 = 192.168.1.250
+DNS.1 = my.spotnik.com
 DNS.2 = localhost
