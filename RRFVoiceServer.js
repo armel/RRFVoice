@@ -149,8 +149,8 @@ const requestHandler = (request, response) => {
 
 
 const options = {
-  key: fs.readFileSync('192.168.1.250-key.pem'),
-  cert: fs.readFileSync('192.168.1.250.pem'),
+  key: fs.readFileSync('spotnik.f5nlg.ovh+3-key.pem'),
+  cert: fs.readFileSync('spotnik.f5nlg.ovh+3.pem),
 };
 
 const server = https.createServer(options, requestHandler);
