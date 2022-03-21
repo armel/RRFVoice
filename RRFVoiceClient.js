@@ -3,6 +3,8 @@ const https = require('https');
 const express = require('express');
 const path = require('path');
 const app = express();
+const port = 4443;
+const version = 0.1;
 
 app.use(express.json());
 app.use(express.static("express"));
@@ -11,17 +13,17 @@ app.use('/', function(req,res){
     res.sendFile(path.join(__dirname+'/index.html'));
     //__dirname : It will resolve to your project folder.
   });
-//const server = http.createServer(app);
 
-const server = https.createServer(
-{
-key: fs.readFileSync('spotnik.f5nlg.ovh+3-key.pem'),
-cert: fs.readFileSync('spotnik.f5nlg.ovh+3.pem'),
-},
-app
-)
+const options = {
+  key: fs.readFileSync('spotnik.f5nlg.ovh+3-key.pem'),
+  cert: fs.readFileSync('spotnik.f5nlg.ovh+3.pem'),
+};
 
-const port = 4443;
+const server = https.createServer(options, app);
 
-server.listen(port);
-console.debug('Server listening on port ' + port);
+server.listen(port, (error) => {
+  if (error) {
+    return console.log('something bad happened', error)
+  }
+  console.log(`server is listening on ${port}`)
+});
