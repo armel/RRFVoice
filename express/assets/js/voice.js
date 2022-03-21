@@ -1,12 +1,5 @@
-// Changer l'url pour pointer vers votre script RRFRemote.js
-
 var url = "https://" + window.location.hostname + ":3443/?cmd=";
-
-// Ne rien changer en dessous...
-
 var speechRecognition = new window.webkitSpeechRecognition();
-
-//speechRecognition.continuous = true;
 
 function speak(text) {
   const speech = new SpeechSynthesisUtterance();
@@ -47,12 +40,16 @@ function handleResult({ results }) {
     captured = "Salon Local";
     httpGet(101, captured);
   }
-  else if(captured.includes("expérimental")) {
+  else if(captured.includes("rimental")) {
     captured = "Salon Expérimental";
     httpGet(102, captured);
   }
   else if(captured.includes("raptor")) {
     captured = "Raptor";
+    httpGet(200, captured);
+  }
+  else if(captured.includes("marseille") || captured.includes("marseillais")) {
+    captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
     httpGet(200, captured);
   }
   else {

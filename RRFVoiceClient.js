@@ -15,8 +15,8 @@ app.use('/', function(req,res){
 
 const server = https.createServer(
 {
-key: fs.readFileSync('key.pem'),
-cert: fs.readFileSync('cert.pem'),
+key: fs.readFileSync('spotnik.f5nlg.ovh+3-key.pem'),
+cert: fs.readFileSync('spotnik.f5nlg.ovh+3.pem'),
 },
 app
 )
