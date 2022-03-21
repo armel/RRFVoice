@@ -52,7 +52,7 @@ Vous pourrez arréter RRFVoice avec la commande
 
 ## Utilisation
 
-Depuis un navigateur Chrome (ou Chromium), allez sur `http://adresse_ip_de_votre_spotnik:4443/`. 
+Depuis un navigateur Chrome (ou Chromium), allez sur `https://adresse_ip_de_votre_spotnik:4443/`. 
 Pensez au [_thisisunsafe_](https://dblazeski.medium.com/chrome-bypass-net-err-cert-invalid-for-development-daefae43eb12) afin de contourner la limitation du certificat auto signé.
 
 Pour lancer une commande, cliquez sur le microphone. 
