@@ -149,8 +149,8 @@ const requestHandler = (request, response) => {
 
 
 const options = {
-  key: fs.readFileSync('localhost+2-key.pem'),
-  cert: fs.readFileSync('localhost+2.pem'),
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem'),
 };
 
 const server = https.createServer(options, requestHandler);
