@@ -15,6 +15,9 @@ git clone https://github.com/armel/RRFVoice.git
 
 Vous pouvez aussi récuppérer une archive zip, avec l'ensemble du projet, si vous n'avez pas git.
 
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem -config ssl.cnf -sha256
+
 ### Lancement
 
 Placez vous dans le répertoire `RRFVoice` :
