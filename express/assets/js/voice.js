@@ -1,6 +1,6 @@
 // Changer l'url pour pointer vers votre script RRFRemote.js
 
-var url = "http://192.168.1.100:3000/?cmd=";
+var url = "https://" + window.location.hostname + ":3443/?cmd=";
 
 // Ne rien changer en dessous...
 
