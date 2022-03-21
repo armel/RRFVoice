@@ -2,6 +2,8 @@ const https = require('https');
 const express = require('express');
 const path = require('path');
 const app = express();
+const fs = require('fs');
+
 const privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
 const certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
 const credentials = {key: privateKey, cert: certificate};
