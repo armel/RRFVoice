@@ -1,7 +1,7 @@
+const app = express();
 const https = require('https');
 const express = require('express');
 const path = require('path');
-const app = express();
 const fs = require('fs');
 
 const privateKey  = fs.readFileSync('selfsigned.key', 'utf8');
@@ -16,6 +16,6 @@ app.use('/', function(req,res){
     //__dirname : It will resolve to your project folder.
   });
 const server = https.createServer(credentials, app);
-const port = 4443;
+const port = 4000;
 server.listen(port);
 console.debug('Server listening on port ' + port);
