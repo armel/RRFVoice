@@ -50,7 +50,7 @@ function handleResult({ results }) {
   }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
     captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
-    httpGet(200, captured);
+    httpGet(100, captured);
   }
   else {
     captured = "Command inconnue";
