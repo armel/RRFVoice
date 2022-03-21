@@ -21,7 +21,7 @@ cert: fs.readFileSync('cert.pem'),
 app
 )
 
-const port = 443;
+const port = 4443;
 
 server.listen(port);
 console.debug('Server listening on port ' + port);
