@@ -11,17 +11,11 @@ Sur votre Spotnik, placez vous dans le répertoire `root` et cloner le projet RR
 ```
 cd root
 git clone https://github.com/armel/RRFVoice.git
-```
+``
 
 Vous pouvez aussi récuppérer une archive zip, avec l'ensemble du projet, si vous n'avez pas git.
 
 ### Lancement
-
-Placez vous dans le répertoire `RRFVoice` qui a été créé suite au clonage du projet :
-
-``
-cd RRFVoice
-``
 
 Lancer le script `RRFRemote.js`  via la commande : 
 
