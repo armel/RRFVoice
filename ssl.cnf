@@ -8,11 +8,10 @@ ST = FR
 L = Paris
 O = RRF
 OU = RRFDevLab
-CN = my.spotnik.com
+CN = localhost
 [v3_req]
 keyUsage = keyEncipherment, dataEncipherment
 extendedKeyUsage = serverAuth
 subjectAltName = @alt_names
 [alt_names]
-DNS.1 = my.spotnik.com
-DNS.2 = localhost
+DNS.1 = localhost
