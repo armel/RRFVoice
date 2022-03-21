@@ -15,8 +15,9 @@ app.use('/', function(req,res){
   });
 
 const options = {
-  key: fs.readFileSync('localhost+2-key.pem'),
-  cert: fs.readFileSync('localhost+2.pem'),
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem'),
+  passphrase: 'RRF'
 };
 
 const server = https.createServer(options, app);
