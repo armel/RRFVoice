@@ -45,3 +45,6 @@ Vous n'avez plus qu'à parler en disant à haute voix, par exemple, _salon local
 
 > Vous devez cliquer sur le microphone à chaque nouvelle commande.
 
+## Note
+
+Note pour moi-même concernant les certificats : https://timonweb.com/django/https-django-development-server-ssl-certificate/
