@@ -47,8 +47,8 @@ function handleResult({ results }) {
     captured = "Salon Local";
     httpGet(101, captured);
   }
-  else if(captured.includes("experimental")) {
-    captured = "Salon Experimental";
+  else if(captured.includes("expérimental")) {
+    captured = "Salon Expérimental";
     httpGet(102, captured);
   }
   else if(captured.includes("raptor")) {
