@@ -48,6 +48,10 @@ function handleResult({ results }) {
     captured = "Raptor";
     httpGet(200, captured);
   }
+  else if(captured.includes("redémarre") || captured.includes("reboot")) {
+    captured = "Raptor";
+    httpGet(200, captured);
+  }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
     captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
     httpGet(100, captured);
