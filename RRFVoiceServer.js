@@ -34,7 +34,7 @@ const requestHandler = (request, response) => {
   }
 
   // Execute
-  
+
   if (cmd > 0 && cmd < 3000) {
     var action = "";
     if (cmd in qsy) {
@@ -48,6 +48,7 @@ const requestHandler = (request, response) => {
     }
     exec(action);
     response.writeHead(200);
+    response.end('QSL');
   }
 }
 
