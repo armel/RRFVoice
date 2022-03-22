@@ -49,8 +49,12 @@ function handleResult({ results }) {
     httpGet(200, captured);
   }
   else if(captured.includes("redémarre") || captured.includes("reboot")) {
-    captured = "Redémarrage en cours";
-    httpGet(200, captured);
+    captured = "Redémarrage en cours !";
+    httpGet(2000, captured);
+  }
+  else if(captured.includes("scan") || captured.includes("scanner")) {
+    captured = "D'accord, voyons s'il y a des QSO en cours ?";
+    httpGet(201, captured);
   }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
     captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
