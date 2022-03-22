@@ -56,3 +56,5 @@ Vous n'avez plus qu'à parler en disant à haute voix, par exemple, _salon local
 
 Pour le moment, le RRFVoice reconnait les commandes pour faire les QSY sur les salons du RRF, manipuler le RRFRaptor ou faire un scan rapide, redémarrer ou stopper son Spotnik, obtenir la météo, etc. 
 
+Notez qu'il est simple d'enrichir le dictionnaire des actions, si besoin.
+
