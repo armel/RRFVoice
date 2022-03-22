@@ -44,9 +44,21 @@ function handleResult({ results }) {
     captured = "Salon Expérimental";
     httpGet(102, captured);
   }
+  else if(captured.includes("régional")) {
+    captured = "Salon Régional";
+    httpGet(103, captured);
+  }
   else if(captured.includes("raptor")) {
     captured = "Raptor";
     httpGet(200, captured);
+  }
+  else if(captured.includes("redémarre") || captured.includes("reboot")) {
+    captured = "Redémarrage en cours !";
+    httpGet(2000, captured);
+  }
+  else if(captured.includes("scan") || captured.includes("scanner")) {
+    captured = "D'accord, voyons s'il y a des QSO en cours ?";
+    httpGet(201, captured);
   }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
     captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
