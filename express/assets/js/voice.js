@@ -49,7 +49,7 @@ function handleResult({ results }) {
     httpGet(200, captured);
   }
   else if(captured.includes("redémarre") || captured.includes("reboot")) {
-    captured = "Raptor";
+    captured = "Redémarrage en cours";
     httpGet(200, captured);
   }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
