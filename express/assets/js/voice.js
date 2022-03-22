@@ -6,9 +6,9 @@ function speak(text) {
   const speech = new SpeechSynthesisUtterance();
 
   if (femaleVoice) {
-    msg.voice = voices[48];
+    speech.voice = voices[48];
   } else {
-    msg.voice = voices[50];
+    speech.voice = voices[50];
   }
 
   speech.text = text;
