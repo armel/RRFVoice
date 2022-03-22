@@ -56,6 +56,10 @@ function handleResult({ results }) {
     captured = "D'accord, voyons s'il y a des QSO en cours ?";
     httpGet(201, captured);
   }
+  else if(captured.includes("information") || captured.includes("infos")) {
+    captured = "Informations du Spotnik";
+    httpGet(*, captured);
+  }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
     captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
     httpGet(100, captured);
