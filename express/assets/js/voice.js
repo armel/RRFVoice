@@ -1,16 +1,8 @@
 var url = "https://" + window.location.hostname + ":3443/?cmd=";
-var femaleVoice = true;
 var speechRecognition = new window.webkitSpeechRecognition();
 
 function speak(text) {
   const speech = new SpeechSynthesisUtterance();
-
-  if (femaleVoice) {
-    speech.voice = voices[48];
-  } else {
-    speech.voice = voices[50];
-  }
-
   speech.text = text;
   speechSynthesis.speak(speech);
 }
