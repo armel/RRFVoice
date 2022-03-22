@@ -15,8 +15,8 @@ app.use('/', function(req,res){
   });
 
 const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
+  key: fs.readFileSync('/opt/spotnik/gui/key.pem'),
+  cert: fs.readFileSync('/opt/spotnik/gui/cert.pem'),
 };
 
 const server = https.createServer(options, app);
