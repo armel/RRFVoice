@@ -44,6 +44,10 @@ function handleResult({ results }) {
     captured = "Salon Expérimental";
     httpGet(102, captured);
   }
+  else if(captured.includes("régional")) {
+    captured = "Salon Régional";
+    httpGet(103, captured);
+  }
   else if(captured.includes("raptor")) {
     captured = "Raptor";
     httpGet(200, captured);
@@ -55,10 +59,6 @@ function handleResult({ results }) {
   else if(captured.includes("scan") || captured.includes("scanner")) {
     captured = "D'accord, voyons s'il y a des QSO en cours ?";
     httpGet(201, captured);
-  }
-  else if(captured.includes("information") || captured.includes("infos")) {
-    captured = "Informations du Spotnik";
-    httpGet(*, captured);
   }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
     captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
