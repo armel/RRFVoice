@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 4443;
-const version = "1.0.2";
+const version = "1.0.3";
 
 app.use(express.json());
 app.use(express.static("express"));
@@ -15,8 +15,8 @@ app.use('/', function(req,res){
   });
 
 const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
+  key: fs.readFileSync('/opt/spotnik/gui/key.pem'),
+  cert: fs.readFileSync('/opt/spotnik/gui/cert.pem'),
 };
 
 const server = https.createServer(options, app);

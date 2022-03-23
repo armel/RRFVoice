@@ -54,11 +54,23 @@ function handleResult({ results }) {
   }
   else if(captured.includes("redémarre") || captured.includes("reboot")) {
     captured = "Redémarrage en cours !";
-    httpGet(2000, captured);
+    httpGet(1000, captured);
+  }
+  else if(captured.includes("shutdown") || captured.includes("arrêt")) {
+    captured = "Arrêt en cours !";
+    httpGet(1001, captured);
   }
   else if(captured.includes("scan") || captured.includes("scanner")) {
     captured = "D'accord, voyons s'il y a des QSO en cours ?";
     httpGet(201, captured);
+  }
+  else if(captured.includes("météo") || captured.includes("WX")) {
+    captured = "Voici la météo";
+    httpGet(2000, captured);
+  }
+  else if(captured.includes("information") || captured.includes("info")) {
+    captured = "Voici les informations";
+    httpGet(2001, captured);
   }
   else if(captured.includes("marseille") || captured.includes("marseillais")) {
     captured = "Puisque tu y tiens, je t'envois sur le salon Bavardage !";
