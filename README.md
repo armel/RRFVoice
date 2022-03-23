@@ -58,3 +58,21 @@ Pour le moment, le RRFVoice reconnait les commandes pour faire les QSY sur les s
 
 Notez qu'il est simple d'enrichir le dictionnaire des actions, si besoin.
 
+## Lancer le RRFVoice automatiquement
+
+Si vous souhaitez lancer automatiquement le RRFVoice, à chaque redémarrage du Spotnik, il est simple de le faire depuis le fichier `/etc/rc.local`.
+
+Donc, juste __avant__ la dernière ligne du fichier (qui doit être `exit 0`), il suffit d'ajouter ces 2 lignes :
+
+```
+cd /root/RRFVoice
+./RRFVoice.sh start
+```
+
+Après modification, votre fichier `/etc/rc.local` devrait donc se terminer par :
+
+```
+cd /root/RRFVoice
+./RRFVoice.sh start
+exit 0
+```
