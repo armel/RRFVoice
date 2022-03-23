@@ -56,7 +56,7 @@ function handleResult({ results }) {
     captured = "Redémarrage en cours !";
     httpGet(1000, captured);
   }
-  else if(captured.includes("shutdown") || captured.includes("arrêt")) {
+  else if(captured.includes("stop") || captured.includes("arrêt")) {
     captured = "Arrêt en cours !";
     httpGet(1001, captured);
   }
@@ -77,7 +77,7 @@ function handleResult({ results }) {
     httpGet(100, captured);
   }
   else {
-    captured = "Command inconnue";
+    captured = "Commande inconnue";
     speak(captured);
   }
 }
