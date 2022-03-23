@@ -94,10 +94,24 @@ function httpGet(command, captured)
   return xmlHttp.responseText;
 }
 
-circlein.addEventListener('click', () => {
+function listen() {
+  document.getElementById("top").classList.add("outline");
+  document.getElementById("delayed").classList.add("outline");
   speechRecognition.start();
   speechRecognition.onresult = handleResult;
   speechRecognition.onspeechend = function() {
     speechRecognition.stop();
+    document.getElementById("delayed").classList.remove("outline");
+    document.getElementById("top").classList.remove("outline");
   }
+}
+
+document.addEventListener('keydown', function (event) {
+  if (event.code === 'Space' || event.code === 'Enter') {
+    listen();
+  }
+});
+
+document.addEventListener('click', () => {
+  listen();
 });

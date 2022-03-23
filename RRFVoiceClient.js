@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 4443;
-const version = "1.0.3";
+const version = "1.0.4";
 
 app.use(express.json());
 app.use(express.static("express"));
