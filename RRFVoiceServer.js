@@ -4,7 +4,7 @@
 const fs = require('fs')
 const https = require('https');
 const port = 3443;
-const version = "1.0.3";
+const version = "1.0.4";
 
 const requestHandler = (request, response) => {
   console.log(request.url);

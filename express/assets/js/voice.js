@@ -56,7 +56,7 @@ function handleResult({ results }) {
     captured = "Redémarrage en cours !";
     httpGet(1000, captured);
   }
-  else if(captured.includes("shutdown") || captured.includes("arrêt")) {
+  else if(captured.includes("stop") || captured.includes("arrêt")) {
     captured = "Arrêt en cours !";
     httpGet(1001, captured);
   }
@@ -77,7 +77,7 @@ function handleResult({ results }) {
     httpGet(100, captured);
   }
   else {
-    captured = "Command inconnue";
+    captured = "Commande inconnue";
     speak(captured);
   }
 }
@@ -94,10 +94,24 @@ function httpGet(command, captured)
   return xmlHttp.responseText;
 }
 
-circlein.addEventListener('click', () => {
+function listen() {
+  document.getElementById("top").classList.add("outline");
+  document.getElementById("delayed").classList.add("outline");
   speechRecognition.start();
   speechRecognition.onresult = handleResult;
   speechRecognition.onspeechend = function() {
     speechRecognition.stop();
+    document.getElementById("delayed").classList.remove("outline");
+    document.getElementById("top").classList.remove("outline");
   }
+}
+
+document.addEventListener('keydown', function (event) {
+  if (event.code === 'Space' || event.code === 'Enter') {
+    listen();
+  }
+});
+
+document.addEventListener('click', () => {
+  listen();
 });
