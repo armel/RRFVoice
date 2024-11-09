@@ -24,6 +24,7 @@ const requestHandler = (request, response) => {
     101:  "/etc/spotnik/restart.loc",
     102:  "/etc/spotnik/restart.exp",
     103:  "/etc/spotnik/restart.reg",
+    104:  "/etc/spotnik/restart.idf",
   };
 
   // Mapping for special command, if not integer
