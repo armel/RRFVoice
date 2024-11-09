@@ -53,7 +53,7 @@ function handleResult({ results }) {
     httpGet(104, captured);
   }
   else if(captured.includes("admin")) {
-    captured = "Salon Admin";
+    captured = "Salon Administrateur";
     httpGet(130, captured);
   }
   else if(captured.includes("raptor")) {
