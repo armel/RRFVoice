@@ -48,8 +48,8 @@ function handleResult({ results }) {
     captured = "Salon Régional";
     httpGet(103, captured);
   }
-  else if(captured.includes("ile de france")) {
-    captured = "Salon ile de france";
+  else if(captured.includes("france") || captured.includes("ile")) {
+    captured = "Salon Ile de France";
     httpGet(104, captured);
   }
   else if(captured.includes("raptor")) {
