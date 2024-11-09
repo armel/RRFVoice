@@ -52,8 +52,8 @@ function handleResult({ results }) {
     captured = "Salon Ile de France";
     httpGet(104, captured);
   }
-  else if(captured.includes("admin")) {
-    captured = "Salon Admin";
+  else if(captured.includes("admin") || captured.includes("administrateur")) {
+    captured = "Salon Administrateur";
     httpGet(130, captured);
   }
   else if(captured.includes("raptor")) {
